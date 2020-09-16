@@ -1,5 +1,11 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet, View, StatusBar} from 'react-native';
+import {
+  SafeAreaView,
+  StyleSheet,
+  View,
+  StatusBar,
+  ScrollView,
+} from 'react-native';
 import HomeScreen from './src/screens/Home';
 
 const App = () => {
@@ -7,9 +13,11 @@ const App = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <View style={styles.Container}>
-          <HomeScreen />
-        </View>
+        <ScrollView bounces="off">
+          <View style={styles.Container}>
+            <HomeScreen />
+          </View>
+        </ScrollView>
       </SafeAreaView>
     </>
   );
@@ -18,7 +26,6 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    overflow: 'hidden',
   },
 });
 

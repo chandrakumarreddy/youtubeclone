@@ -36,7 +36,6 @@ export default function Header() {
             uri:
               'https://f1.pngfuel.com/png/933/945/137/social-media-icons-background-avatar-user-profile-login-black-circle-silhouette-symbol-png-clip-art.png',
           }}
-          resizeMode="cover"
         />
       </Content>
     </Container>
