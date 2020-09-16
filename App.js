@@ -13,7 +13,10 @@ const App = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <ScrollView bounces="off">
+        <ScrollView
+          bounces="off"
+          showsVerticalScrollIndicator={false}
+          snapToAlignment="center">
           <View style={styles.Container}>
             <HomeScreen />
           </View>
