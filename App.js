@@ -6,7 +6,8 @@ import {
   StatusBar,
   ScrollView,
 } from 'react-native';
-import HomeScreen from './src/screens/Home';
+// import HomeScreen from './src/screens/Home';
+import SearchScreen from './src/screens/Search';
 
 const App = () => {
   return (
@@ -18,7 +19,8 @@ const App = () => {
           showsVerticalScrollIndicator={false}
           snapToAlignment="center">
           <View style={styles.Container}>
-            <HomeScreen />
+            {/* <HomeScreen /> */}
+            <SearchScreen />
           </View>
         </ScrollView>
       </SafeAreaView>

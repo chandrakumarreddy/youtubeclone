@@ -20,7 +20,7 @@ export default function Header() {
         <Logo
           source={{
             uri:
-              'https://www.clipartmax.com/png/middle/58-585369_old-video-camera-free-icon-video-cam-vector-outline.png',
+              'https://cdn.iconscout.com/icon/premium/png-256-thumb/back-button-6-921315.png',
           }}
           resizeMode="cover"
         />
