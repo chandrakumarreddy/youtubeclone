@@ -6,6 +6,7 @@ export const Container = styled.View`
 
 export const Cover = styled.View`
   padding: 0 16px;
+  height: 60px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -24,3 +25,5 @@ export const SearchInput = styled.TextInput`
   padding: 0 16px;
   border-radius: 8px;
 `;
+
+export const Content = styled.ScrollView``;

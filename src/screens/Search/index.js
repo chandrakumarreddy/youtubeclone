@@ -1,6 +1,7 @@
 import React from 'react';
 import {Platform, StyleSheet} from 'react-native';
-import {Container, Cover, Icon, SearchInput} from './index.css';
+import {Container, Cover, Icon, SearchInput, Content} from './index.css';
+import MiniCard from '../../components/MiniCard';
 
 export default function Index() {
   return (
@@ -17,6 +18,9 @@ export default function Index() {
           source={{uri: 'https://static.thenounproject.com/png/373675-200.png'}}
         />
       </Cover>
+      <Content showsVerticalScrollIndicator={false} bounces="off">
+        <MiniCard />
+      </Content>
     </Container>
   );
 }
