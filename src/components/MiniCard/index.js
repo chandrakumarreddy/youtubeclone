@@ -8,19 +8,18 @@ import {
   ChannelName,
 } from './index.css';
 
-export default function Index() {
+export default function Index({videoId, title, channelName}) {
   return (
     <Container>
       <Cover>
         <Thumbnail
           source={{
-            uri:
-              'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTr7_phGThSR4Y1fiONdY8-6WZ-jcwT-e4aKw&usqp=CAU',
+            uri: `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`,
           }}
         />
         <Content>
-          <Title>Dummy Title</Title>
-          <ChannelName>Channel name</ChannelName>
+          <Title numberOfLines={3}>{title}</Title>
+          <ChannelName numberOfLines={1}>{channelName}</ChannelName>
         </Content>
       </Cover>
     </Container>

@@ -25,5 +25,3 @@ export const SearchInput = styled.TextInput`
   padding: 0 16px;
   border-radius: 8px;
 `;
-
-export const Content = styled.ScrollView``;

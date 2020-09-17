@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
-  padding: 0 16px;
+  margin: 0 16px;
   margin-top: 16px;
 `;
 export const Cover = styled.View`
@@ -12,9 +12,13 @@ export const Thumbnail = styled.Image`
   height: 100px;
 `;
 export const Content = styled.View`
-  margin-left: 16px;
+  margin: 0 16px;
+  flex-shrink: 1;
 `;
 export const Title = styled.Text`
-  font-size: 20px;
+  font-size: 16px;
+  margin-bottom: 4px;
 `;
-export const ChannelName = styled.Text``;
+export const ChannelName = styled.Text`
+  font-size: 14px;
+`;
