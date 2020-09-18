@@ -1,9 +1,12 @@
 import React from 'react';
 import {StyleSheet, Platform} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 import {Container, Cover, Logo, Content} from './index.css';
 import Text from '../../base/Text';
+import {TouchableWithoutFeedback} from 'react-native-gesture-handler';
 
 export default function Header() {
+  const navigation = useNavigation();
   return (
     <Container style={styles.container}>
       <Cover>
@@ -20,17 +23,19 @@ export default function Header() {
         <Logo
           source={{
             uri:
-              'https://cdn.iconscout.com/icon/premium/png-256-thumb/back-button-6-921315.png',
+              'https://img.pngio.com/981-x-858-6-video-camera-icon-png-transparent-png-364739-video-camera-icon-png-840_774.png',
           }}
           resizeMode="cover"
         />
-        <Logo
-          source={{
-            uri:
-              'https://www.iconfinder.com/data/icons/ios-7-icons/50/search-512.png',
-          }}
-          resizeMode="cover"
-        />
+        <TouchableWithoutFeedback onPress={() => navigation.navigate('Search')}>
+          <Logo
+            source={{
+              uri:
+                'https://www.iconfinder.com/data/icons/ios-7-icons/50/search-512.png',
+            }}
+            resizeMode="cover"
+          />
+        </TouchableWithoutFeedback>
         <Logo
           source={{
             uri:

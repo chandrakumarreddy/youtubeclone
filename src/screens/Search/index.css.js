@@ -1,8 +1,5 @@
 import styled from 'styled-components/native';
-
-export const Container = styled.View`
-  flex: 1;
-`;
+export {Container} from '../common.css';
 
 export const Cover = styled.View`
   padding: 0 16px;

@@ -1,15 +1,12 @@
 import React, {useState} from 'react';
-import {
-  FlatList,
-  Platform,
-  StyleSheet,
-  TouchableWithoutFeedback,
-  ActivityIndicator,
-} from 'react-native';
+import {FlatList, Platform, StyleSheet, ActivityIndicator} from 'react-native';
+import {TouchableWithoutFeedback} from 'react-native-gesture-handler';
+import {useNavigation} from '@react-navigation/native';
 import {Container, Cover, Icon, SearchInput} from './index.css';
 import MiniCard from '../../components/MiniCard';
 
 export default function Index() {
+  const navigator = useNavigation();
   const [searchTerm, setSearchTerm] = useState('');
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -31,16 +28,17 @@ export default function Index() {
   return (
     <Container>
       <Cover style={styles.cover}>
-        <Icon
-          source={{
-            uri:
-              'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS_quu1zbJGHA0JVcN4G-EzSVCiu0esgeHBVw&usqp=CAU',
-          }}
-        />
+        <TouchableWithoutFeedback onPress={navigator.goBack}>
+          <Icon
+            source={{
+              uri:
+                'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS_quu1zbJGHA0JVcN4G-EzSVCiu0esgeHBVw&usqp=CAU',
+            }}
+          />
+        </TouchableWithoutFeedback>
         <SearchInput
           placeholder="Search here"
           onChange={(term) => setSearchTerm(term)}
-          value={searchTerm}
           autoCapitalize="none"
         />
         <TouchableWithoutFeedback onPress={fetchData}>
