@@ -41,6 +41,7 @@ export default function Index() {
           placeholder="Search here"
           onChange={(term) => setSearchTerm(term)}
           value={searchTerm}
+          autoCapitalize="none"
         />
         <TouchableWithoutFeedback onPress={fetchData}>
           <Icon
