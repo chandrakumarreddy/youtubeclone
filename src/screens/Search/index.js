@@ -2,23 +2,26 @@ import React, {useState} from 'react';
 import {FlatList, Platform, StyleSheet, ActivityIndicator} from 'react-native';
 import {TouchableWithoutFeedback} from 'react-native-gesture-handler';
 import {useNavigation} from '@react-navigation/native';
+import {useDispatch, useSelector} from 'react-redux';
 import {Container, Cover, Icon, SearchInput} from './index.css';
 import MiniCard from '../../components/MiniCard';
 
 export default function Index() {
   const navigator = useNavigation();
+  const dispatch = useDispatch();
   const [searchTerm, setSearchTerm] = useState('');
-  const [data, setData] = useState([]);
+  const data = useSelector((state) => state.minicard.minicardData);
+  console.log(data);
   const [loading, setLoading] = useState(false);
   const fetchData = async () => {
     try {
       setLoading(true);
       const res = await (
         await fetch(
-          `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=130&q=${searchTerm}&type=video&key=`,
+          `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=130&q=${searchTerm}&type=video&key=AIzaSyAck4zbAlWM8jGOw6Rwmd0Ic-hMA4ON58E`,
         )
       ).json();
-      setData(res.items);
+      dispatch({type: 'FETCH_MINICARD_DATA', payload: res.items});
     } catch (error) {
       console.log(error);
     } finally {

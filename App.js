@@ -1,9 +1,11 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import {SafeAreaView, StatusBar, Image} from 'react-native';
+import {StatusBar, Image} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {Provider} from 'react-redux';
+import store from './src/redux/store';
 import HomeScreen from './src/screens/Home';
 import SearchScreen from './src/screens/Search';
 import ExploreScreen from './src/screens/Explore';
@@ -50,12 +52,14 @@ const App = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <NavigationContainer>
-        <Stack.Navigator headerMode="none">
-          <Stack.Screen name="Home" component={Home} />
-          <Stack.Screen name="Search" component={SearchScreen} />
-        </Stack.Navigator>
-      </NavigationContainer>
+      <Provider store={store}>
+        <NavigationContainer>
+          <Stack.Navigator headerMode="none">
+            <Stack.Screen name="Home" component={Home} />
+            <Stack.Screen name="Search" component={SearchScreen} />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </Provider>
     </>
   );
 };
