@@ -12,8 +12,7 @@ export default function Header() {
       <Cover>
         <Logo
           source={{
-            uri:
-              'https://cdn.iconscout.com/icon/free/png-256/youtube-85-226402.png',
+            uri: 'https://img.icons8.com/color/30/000000/youtube-play.png',
           }}
           resizeMode="cover"
         />

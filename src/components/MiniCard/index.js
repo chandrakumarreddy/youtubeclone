@@ -1,3 +1,4 @@
+import {useTheme} from '@react-navigation/native';
 import React from 'react';
 import {
   Container,
@@ -9,6 +10,7 @@ import {
 } from './index.css';
 
 export default function Index({videoId, title, channelName}) {
+  const {colors} = useTheme();
   return (
     <Container>
       <Cover>
@@ -18,8 +20,12 @@ export default function Index({videoId, title, channelName}) {
           }}
         />
         <Content>
-          <Title numberOfLines={3}>{title}</Title>
-          <ChannelName numberOfLines={1}>{channelName}</ChannelName>
+          <Title numberOfLines={3} $color={colors.white}>
+            {title}
+          </Title>
+          <ChannelName numberOfLines={1} $color={colors.white}>
+            {channelName}
+          </ChannelName>
         </Content>
       </Cover>
     </Container>

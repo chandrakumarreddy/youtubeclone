@@ -18,7 +18,9 @@ export const Content = styled.View`
 export const Title = styled.Text`
   font-size: 16px;
   margin-bottom: 4px;
+  color: ${({$color}) => $color};
 `;
 export const ChannelName = styled.Text`
   font-size: 14px;
+  color: ${({$color}) => $color};
 `;

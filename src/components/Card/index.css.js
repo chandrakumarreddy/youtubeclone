@@ -29,7 +29,9 @@ export const Content = styled.View`
 export const Title = styled.Text`
   font-size: 14px;
   margin-bottom: 2px;
+  color: ${({$color}) => $color};
 `;
 export const Description = styled.Text`
   font-size: 12px;
+  color: ${({$color}) => $color};
 `;

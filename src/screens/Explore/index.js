@@ -1,3 +1,4 @@
+import {useTheme} from '@react-navigation/native';
 import React from 'react';
 import {FlatList} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
@@ -21,6 +22,7 @@ const LittleCard = ({title}) => (
 );
 
 export default function Index() {
+  const {colors} = useTheme();
   const data = useSelector((state) => state.minicard);
   return (
     <Container>
@@ -31,7 +33,7 @@ export default function Index() {
             <LittleCard title={item} />
           ))}
         </PopularCards>
-        <ExploreTitle>Trending videos</ExploreTitle>
+        <ExploreTitle $color={colors.white}>Trending videos</ExploreTitle>
         <FlatList
           data={data}
           renderItem={({item}) => {

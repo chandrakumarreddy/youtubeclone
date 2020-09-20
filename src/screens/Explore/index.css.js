@@ -27,4 +27,5 @@ export const PopularCards = styled.View`
 export const ExploreTitle = styled.Text`
   margin: 16px;
   font-size: 20px;
+  color: ${({$color}) => $color};
 `;
