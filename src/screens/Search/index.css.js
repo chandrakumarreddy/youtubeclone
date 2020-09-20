@@ -7,6 +7,7 @@ export const Cover = styled.View`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  background-color: ${({$bgColor}) => $bgColor};
 `;
 
 export const Icon = styled.Image`

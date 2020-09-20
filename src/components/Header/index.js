@@ -1,14 +1,16 @@
 import React from 'react';
 import {StyleSheet, Platform} from 'react-native';
-import {useNavigation} from '@react-navigation/native';
+import {useNavigation, useTheme} from '@react-navigation/native';
 import {Container, Cover, Logo, Content} from './index.css';
 import Text from '../../base/Text';
 import {TouchableWithoutFeedback} from 'react-native-gesture-handler';
 
 export default function Header() {
   const navigation = useNavigation();
+  const {colors} = useTheme();
+  const iconColor = colors.white.slice(1);
   return (
-    <Container style={styles.container}>
+    <Container style={styles.container} $bgColor={colors.headerColor}>
       <Cover>
         <Logo
           source={{
@@ -16,29 +18,26 @@ export default function Header() {
           }}
           resizeMode="cover"
         />
-        <Text style={{fontSize: 20}}>Youtube</Text>
+        <Text style={{fontSize: 20, color: colors.white}}>Youtube</Text>
       </Cover>
       <Content>
         <Logo
           source={{
-            uri:
-              'https://img.pngio.com/981-x-858-6-video-camera-icon-png-transparent-png-364739-video-camera-icon-png-840_774.png',
+            uri: `https://img.icons8.com/fluent-systems-filled/24/${iconColor}/video-message.png`,
           }}
           resizeMode="cover"
         />
         <TouchableWithoutFeedback onPress={() => navigation.navigate('Search')}>
           <Logo
             source={{
-              uri:
-                'https://www.iconfinder.com/data/icons/ios-7-icons/50/search-512.png',
+              uri: `https://img.icons8.com/fluent-systems-regular/24/${iconColor}/search.png`,
             }}
             resizeMode="cover"
           />
         </TouchableWithoutFeedback>
         <Logo
           source={{
-            uri:
-              'https://f1.pngfuel.com/png/933/945/137/social-media-icons-background-avatar-user-profile-login-black-circle-silhouette-symbol-png-clip-art.png',
+            uri: `https://img.icons8.com/fluent-systems-filled/24/${iconColor}/gender-neutral-user.png`,
           }}
         />
       </Content>

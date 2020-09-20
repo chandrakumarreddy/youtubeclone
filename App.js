@@ -21,6 +21,7 @@ const CustomDarkTheme = {
   ...DarkTheme,
   colors: {
     ...DarkTheme.colors,
+    headerColor: '#404040',
     white: '#fff',
     fontWhite: '#ffffff',
     inactive: '#898989',
@@ -31,6 +32,7 @@ const CustomDefaultTheme = {
   ...DefaultTheme,
   colors: {
     ...DefaultTheme.colors,
+    headerColor: '#fff',
     white: '#000',
     fontWhite: '#000000',
     inactive: '#898989',
@@ -55,7 +57,7 @@ const Home = () => {
           } else if (route.name === 'Explore') {
             iconName = `https://img.icons8.com/ios-glyphs/30/${iconColor}/compass.png`;
           } else if (route.name === 'Subscriptions') {
-            iconName = `https://img.icons8.com/ios-filled/50/${iconColor}/wow-button.png`;
+            iconName = `https://img.icons8.com/fluent-systems-filled/24/${iconColor}/video-playlist.png`;
           }
           return (
             <Image source={{uri: iconName}} style={{width: 32, height: 32}} />
@@ -78,7 +80,7 @@ const App = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <Provider store={store}>
-        <NavigationContainer theme={CustomDefaultTheme}>
+        <NavigationContainer theme={CustomDarkTheme}>
           <Stack.Navigator headerMode="none">
             <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="Search" component={SearchScreen} />
