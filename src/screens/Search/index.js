@@ -18,7 +18,7 @@ export default function Index() {
       setLoading(true);
       const res = await (
         await fetch(
-          `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=130&q=${searchTerm}&type=video&key=AIzaSyAck4zbAlWM8jGOw6Rwmd0Ic-hMA4ON58E`,
+          `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=130&q=${searchTerm}&type=video&key=`,
         )
       ).json();
       dispatch({type: 'FETCH_MINICARD_DATA', payload: res.items});
