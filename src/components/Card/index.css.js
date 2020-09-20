@@ -1,7 +1,7 @@
 import {Dimensions} from 'react-native';
 import styled from 'styled-components/native';
 
-const {width, height} = Dimensions.get('window');
+const {width, height} = Dimensions.get('screen');
 
 export const Container = styled.View``;
 
@@ -11,7 +11,7 @@ export const Image = styled.Image`
 `;
 
 export const Cover = styled.View`
-  padding: 8px 16px;
+  padding: 12px 16px;
   flex-direction: row;
   align-items: center;
 `;
@@ -24,9 +24,12 @@ export const Logo = styled.Image`
 
 export const Content = styled.View`
   margin: 0 16px;
+  flex-shrink: 1;
 `;
 export const Title = styled.Text`
-  font-size: 18px;
+  font-size: 14px;
   margin-bottom: 2px;
 `;
-export const Description = styled.Text``;
+export const Description = styled.Text`
+  font-size: 12px;
+`;

@@ -10,15 +10,14 @@ export default function Index() {
   const navigator = useNavigation();
   const dispatch = useDispatch();
   const [searchTerm, setSearchTerm] = useState('');
-  const data = useSelector((state) => state.minicard.minicardData);
-  console.log(data);
+  const data = useSelector((state) => state.minicard);
   const [loading, setLoading] = useState(false);
   const fetchData = async () => {
     try {
       setLoading(true);
       const res = await (
         await fetch(
-          `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=130&q=${searchTerm}&type=video&key=`,
+          `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=130&q=${searchTerm}&type=video&key=AIzaSyAck4zbAlWM8jGOw6Rwmd0Ic-hMA4ON58E`,
         )
       ).json();
       dispatch({type: 'FETCH_MINICARD_DATA', payload: res.items});

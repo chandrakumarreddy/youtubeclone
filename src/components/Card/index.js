@@ -9,27 +9,25 @@ import {
   Description,
 } from './index.css';
 
-export default function Card() {
+export default function Card({videoId, title, channelName, channelThumbnail}) {
   return (
     <Container>
       <Image
         source={{
-          uri:
-            'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTr7_phGThSR4Y1fiONdY8-6WZ-jcwT-e4aKw&usqp=CAU',
+          uri: `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`,
         }}
       />
       <Cover>
         <Logo
           source={{
-            uri:
-              'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTr7_phGThSR4Y1fiONdY8-6WZ-jcwT-e4aKw&usqp=CAU',
+            uri: channelThumbnail,
           }}
         />
         <Content>
           <Title numberOfLines={2} ellipsizeMode="tail">
-            Beautiful saree borderd with gold flakes
+            {title}
           </Title>
-          <Description>Beautiful saree borderd with gold flakes</Description>
+          <Description>{channelName}</Description>
         </Content>
       </Cover>
     </Container>
