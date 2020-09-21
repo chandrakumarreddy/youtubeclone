@@ -1,12 +1,14 @@
 import React from 'react';
 import {StyleSheet, Platform} from 'react-native';
 import {useNavigation, useTheme} from '@react-navigation/native';
+import {TouchableWithoutFeedback} from 'react-native-gesture-handler';
+import {useDispatch} from 'react-redux';
 import {Container, Cover, Logo, Content} from './index.css';
 import Text from '../../base/Text';
-import {TouchableWithoutFeedback} from 'react-native-gesture-handler';
 
 export default function Header() {
   const navigation = useNavigation();
+  const dispatch = useDispatch();
   const {colors} = useTheme();
   const iconColor = colors.fontWhite.slice(1);
   return (
@@ -35,11 +37,14 @@ export default function Header() {
             resizeMode="cover"
           />
         </TouchableWithoutFeedback>
-        <Logo
-          source={{
-            uri: `https://img.icons8.com/fluent-systems-filled/24/${iconColor}/gender-neutral-user.png`,
-          }}
-        />
+        <TouchableWithoutFeedback
+          onPress={() => dispatch({type: 'CHANGE_THEME'})}>
+          <Logo
+            source={{
+              uri: `https://img.icons8.com/fluent-systems-filled/24/${iconColor}/gender-neutral-user.png`,
+            }}
+          />
+        </TouchableWithoutFeedback>
       </Content>
     </Container>
   );

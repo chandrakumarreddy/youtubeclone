@@ -9,7 +9,7 @@ import {
 } from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {Provider} from 'react-redux';
+import {Provider, useSelector} from 'react-redux';
 import store from './src/redux/store';
 import HomeScreen from './src/screens/Home';
 import SearchScreen from './src/screens/Search';
@@ -77,17 +77,24 @@ const Home = () => {
 
 const App = () => {
   return (
+    <Provider store={store}>
+      <Navigation />
+    </Provider>
+  );
+};
+
+const Navigation = () => {
+  const theme = useSelector((state) => state.theme);
+  return (
     <>
-      <StatusBar barStyle="dark-content" />
-      <Provider store={store}>
-        <NavigationContainer theme={CustomDarkTheme}>
-          <Stack.Navigator headerMode="none">
-            <Stack.Screen name="Home" component={Home} />
-            <Stack.Screen name="Search" component={SearchScreen} />
-            <Stack.Screen name="VideoPlayer" component={VideoPlayer} />
-          </Stack.Navigator>
-        </NavigationContainer>
-      </Provider>
+      <StatusBar barStyle={theme ? 'light-content' : 'dark-content'} />
+      <NavigationContainer theme={theme ? CustomDarkTheme : CustomDefaultTheme}>
+        <Stack.Navigator headerMode="none">
+          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="Search" component={SearchScreen} />
+          <Stack.Screen name="VideoPlayer" component={VideoPlayer} />
+        </Stack.Navigator>
+      </NavigationContainer>
     </>
   );
 };
