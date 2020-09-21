@@ -2,11 +2,11 @@
 
 ### Preview
 
-![p1](https://raw.githubusercontent.com/chandrakumarreddy/youtubeclone/master/preview/p1.png)
-![p2](https://raw.githubusercontent.com/chandrakumarreddy/yßoutubeclone/master/preview/p2.png)
-![p3](https://raw.githubusercontent.com/chandrakumarreddy/youtubeclone/master/preview/p3.png)
-![p4](https://raw.githubusercontent.com/chandrakumarreddy/youtubeclone/master/preview/p4.png)
-![p5](https://raw.githubusercontent.com/chandrakumarreddy/youtubeclone/master/preview/p5.png)
+![](https://raw.githubusercontent.com/chandrakumarreddy/youtubeclone/master/preview/p1.png =300x300)
+![](https://raw.githubusercontent.com/chandrakumarreddy/youtubeclone/master/preview/p2.png =300x300)
+![](https://raw.githubusercontent.com/chandrakumarreddy/youtubeclone/master/preview/p3.png =300x300)
+![](https://raw.githubusercontent.com/chandrakumarreddy/youtubeclone/master/preview/p4.png =300x300)
+![](https://raw.githubusercontent.com/chandrakumarreddy/youtubeclone/master/preview/p5.png =300x300)
 
 ## Simple Youtube clone.
 
