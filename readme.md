@@ -3,7 +3,7 @@
 ### Features
 
 1. Tab+stack navigation
-2. Dark Theme
+2. Dark/Default Theming
 3. WebView
 
 ### Preview
