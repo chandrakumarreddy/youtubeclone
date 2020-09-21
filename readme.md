@@ -1,4 +1,10 @@
-## YouTube clone
+## Youtube clone.
+
+### Features
+
+1. Tab+stack navigation
+2. Dark Theme
+3. WebView
 
 ### Preview
 
@@ -9,11 +15,3 @@
 <img src='https://raw.githubusercontent.com/chandrakumarreddy/youtubeclone/master/preview/p4.png' width='300' style="margin-bottom:20px"/>
 <img src='https://raw.githubusercontent.com/chandrakumarreddy/youtubeclone/master/preview/p5.png' width='300' style="margin-bottom:20px"/>
 </div>
-
-## Simple Youtube clone.
-
-### Features
-
-1. Tab+stack navigation
-2. Dark Theme
-3. WebView
