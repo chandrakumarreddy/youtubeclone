@@ -9,7 +9,7 @@ import MiniCard from '../../components/MiniCard';
 export default function Index() {
   const navigator = useNavigation();
   const {colors} = useTheme();
-  const iconColor = colors.white.slice(1);
+  const iconColor = colors.fontWhite.slice(1);
   const dispatch = useDispatch();
   const [searchTerm, setSearchTerm] = useState('');
   const data = useSelector((state) => state.minicard);
@@ -19,7 +19,7 @@ export default function Index() {
       setLoading(true);
       const res = await (
         await fetch(
-          `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=130&q=${searchTerm}&type=video&key=`,
+          `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=130&q=${searchTerm}&type=video&key=AIzaSyAmC6mY5PASoCEOEHnojp2N5RsE-vkSaWg`,
         )
       ).json();
       dispatch({type: 'FETCH_MINICARD_DATA', payload: res.items});

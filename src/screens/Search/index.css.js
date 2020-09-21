@@ -17,9 +17,9 @@ export const Icon = styled.Image`
 
 export const SearchInput = styled.TextInput`
   background-color: #e6e6e6;
-  height: 40px;
+  height: 36px;
   flex: 1;
-  margin: 0 16px;
+  margin: 0 8px;
   padding: 0 16px;
   border-radius: 8px;
 `;

@@ -8,7 +8,7 @@ import {TouchableWithoutFeedback} from 'react-native-gesture-handler';
 export default function Header() {
   const navigation = useNavigation();
   const {colors} = useTheme();
-  const iconColor = colors.white.slice(1);
+  const iconColor = colors.fontWhite.slice(1);
   return (
     <Container style={styles.container} $bgColor={colors.headerColor}>
       <Cover>
