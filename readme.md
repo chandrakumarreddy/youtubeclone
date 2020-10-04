@@ -5,6 +5,7 @@
 1. Tab+stack navigation
 2. Dark/Default Theming
 3. WebView
+4. Redux for state management
 
 ### Preview
 
